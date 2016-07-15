@@ -13,6 +13,7 @@
 		18D2DA091D36E60B00F11FD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D2DA071D36E60B00F11FD6 /* Main.storyboard */; };
 		18D2DA0B1D36E60B00F11FD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D2DA0A1D36E60B00F11FD6 /* Assets.xcassets */; };
 		18D2DA0E1D36E60B00F11FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D2DA0C1D36E60B00F11FD6 /* LaunchScreen.storyboard */; };
+		18D2DA171D36F65800F11FD6 /* NetworkAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2DA161D36F65800F11FD6 /* NetworkAdapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		18D2DA0A1D36E60B00F11FD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D2DA0D1D36E60B00F11FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18D2DA0F1D36E60B00F11FD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D2DA151D36F65800F11FD6 /* NetworkAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkAdapter.h; sourceTree = "<group>"; };
+		18D2DA161D36F65800F11FD6 /* NetworkAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkAdapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,17 +69,19 @@
 				18D2DA0A1D36E60B00F11FD6 /* Assets.xcassets */,
 				18D2DA0C1D36E60B00F11FD6 /* LaunchScreen.storyboard */,
 				18D2DA0F1D36E60B00F11FD6 /* Info.plist */,
-				18D2D9FE1D36E60B00F11FD6 /* Supporting Files */,
+				18D2D9FE1D36E60B00F11FD6 /* Network Files */,
+				18D2DA151D36F65800F11FD6 /* NetworkAdapter.h */,
+				18D2DA161D36F65800F11FD6 /* NetworkAdapter.m */,
 			);
 			path = IBGxNetworkManager;
 			sourceTree = "<group>";
 		};
-		18D2D9FE1D36E60B00F11FD6 /* Supporting Files */ = {
+		18D2D9FE1D36E60B00F11FD6 /* Network Files */ = {
 			isa = PBXGroup;
 			children = (
 				18D2D9FF1D36E60B00F11FD6 /* main.m */,
 			);
-			name = "Supporting Files";
+			name = "Network Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +156,7 @@
 			files = (
 				18D2DA061D36E60B00F11FD6 /* ViewController.m in Sources */,
 				18D2DA031D36E60B00F11FD6 /* AppDelegate.m in Sources */,
+				18D2DA171D36F65800F11FD6 /* NetworkAdapter.m in Sources */,
 				18D2DA001D36E60B00F11FD6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
