@@ -7,21 +7,49 @@
 //
 
 #import "ViewController.h"
-#import <Rea>
+#import "Reachability.h"
+#import "NetworkAdapter.h"
+#import "UIImageView+Network.h"
 
 @interface ViewController ()
+
+
+@property(nonatomic,strong) NetworkAdapter *adapter;
 
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.adapter = [[NetworkAdapter alloc]init];
     
+    if ([self checkReachability] == 1) {
+        [self.adapter setMaxNumberOfConcurrentOperations:6];
+    }else if ([self checkReachability] == 2){
+        [self.adapter setMaxNumberOfConcurrentOperations:2];
+    }
     
 }
 
+
+-(NSInteger)checkReachability{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    
+    NetworkStatus status = [reachability currentReachabilityStatus];
+    
+    if(status == NotReachable){
+        return 0;
+    }else if (status == ReachableViaWiFi){
+        return 1;
+    }else if (status == ReachableViaWWAN){
+        return 2;
+    }else{
+        return -1;
+    }
+}
 
 
 

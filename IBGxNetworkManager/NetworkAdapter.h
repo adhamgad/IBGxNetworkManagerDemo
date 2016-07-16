@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NetworkAdapter : NSObject
 
 
--(void)enqueueRequestWithURL:(NSURL *)url httpverb:(NSString *)verb andParameters:(NSArray *)params;
+@interface NetworkAdapter : NSObject <NSURLSessionDelegate,NSURLSessionDownloadDelegate>
+
+
+-(void)enqueueRequestWithURL:(NSURL *)url httpverb:(NSString *)verb parameters:(NSString *)params completionHandler:(void (^)(NSURL * location))completionHandler;
+
 -(void)setMaxNumberOfConcurrentOperations:(NSInteger)max;
 
 @end

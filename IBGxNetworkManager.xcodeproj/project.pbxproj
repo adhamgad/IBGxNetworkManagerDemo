@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18399D231D394AD60003A53F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18399D221D394AD60003A53F /* Reachability.m */; };
+		18399D251D394AF80003A53F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18399D241D394AF80003A53F /* SystemConfiguration.framework */; };
+		18399D311D3A45C90003A53F /* UIImageView+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 18399D301D3A45C90003A53F /* UIImageView+Network.m */; };
 		18D2DA001D36E60B00F11FD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2D9FF1D36E60B00F11FD6 /* main.m */; };
 		18D2DA031D36E60B00F11FD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2DA021D36E60B00F11FD6 /* AppDelegate.m */; };
 		18D2DA061D36E60B00F11FD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2DA051D36E60B00F11FD6 /* ViewController.m */; };
@@ -17,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18399D211D394AD60003A53F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		18399D221D394AD60003A53F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		18399D241D394AF80003A53F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		18399D2F1D3A45C90003A53F /* UIImageView+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Network.h"; sourceTree = "<group>"; };
+		18399D301D3A45C90003A53F /* UIImageView+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Network.m"; sourceTree = "<group>"; };
 		18D2D9FB1D36E60B00F11FD6 /* IBGxNetworkManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBGxNetworkManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D2D9FF1D36E60B00F11FD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18D2DA011D36E60B00F11FD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18399D251D394AF80003A53F /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +54,9 @@
 		18D2D9F21D36E60A00F11FD6 = {
 			isa = PBXGroup;
 			children = (
+				18399D241D394AF80003A53F /* SystemConfiguration.framework */,
+				18399D211D394AD60003A53F /* Reachability.h */,
+				18399D221D394AD60003A53F /* Reachability.m */,
 				18D2D9FD1D36E60B00F11FD6 /* IBGxNetworkManager */,
 				18D2D9FC1D36E60B00F11FD6 /* Products */,
 			);
@@ -65,6 +77,8 @@
 				18D2DA021D36E60B00F11FD6 /* AppDelegate.m */,
 				18D2DA041D36E60B00F11FD6 /* ViewController.h */,
 				18D2DA051D36E60B00F11FD6 /* ViewController.m */,
+				18399D2F1D3A45C90003A53F /* UIImageView+Network.h */,
+				18399D301D3A45C90003A53F /* UIImageView+Network.m */,
 				18D2DA071D36E60B00F11FD6 /* Main.storyboard */,
 				18D2DA0A1D36E60B00F11FD6 /* Assets.xcassets */,
 				18D2DA0C1D36E60B00F11FD6 /* LaunchScreen.storyboard */,
@@ -115,6 +129,11 @@
 				TargetAttributes = {
 					18D2D9FA1D36E60A00F11FD6 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -155,9 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D2DA061D36E60B00F11FD6 /* ViewController.m in Sources */,
+				18399D311D3A45C90003A53F /* UIImageView+Network.m in Sources */,
 				18D2DA031D36E60B00F11FD6 /* AppDelegate.m in Sources */,
 				18D2DA171D36F65800F11FD6 /* NetworkAdapter.m in Sources */,
 				18D2DA001D36E60B00F11FD6 /* main.m in Sources */,
+				18399D231D394AD60003A53F /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +327,7 @@
 				18D2DA141D36E60B00F11FD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

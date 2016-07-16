@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "NetworkAdapter.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController 
 
-@property(nonatomic,strong) NetworkAdapter *adapter;
+
 
 @end
 
